@@ -1,0 +1,27 @@
+html {
+  font-size: 15px;
+}
+
+body {
+  padding: 0;
+  margin: 0;
+  font-family: Helvetica;
+}
+
+p {
+  padding: 0;
+  margin: 0;
+}
+
+.full-height-layout {
+  height: 100vh;
+  @include flexbox;
+  @include flex-direction(column);
+  @include align-items(flex-start);
+
+  @include linearGradient(to top, get(bg-grad-start), get(bg-grad-end));
+}
+
+.app-main {
+  width: 100%;
+}

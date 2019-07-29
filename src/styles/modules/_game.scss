@@ -1,0 +1,72 @@
+.app-main--game-container {
+  width: 100%;
+  height: 80vh;
+
+  @include flexbox;
+  @include justify-content(center);
+  @include align-items(flex-start);
+
+  .app-main--game-grid {
+    position: relative;
+    width: 500px;
+    height: 500px;
+
+    background-color: get(white);
+
+    @include flexbox;
+    @include flex-direction(row);
+    @include justify-content(center);
+    @include align-items(center);
+    @include flex-wrap(wrap);
+
+    .grid {
+      width: 30%;
+      height: 30%;
+      border-right: 25px solid black;
+      border-bottom: 25px solid black;
+      @include flexbox;
+      @include justify-content(center);
+      @include align-items(center);
+
+      background-color: get(grey-dark);
+      background-clip: padding-box;
+
+      &:nth-child(3n) {
+        border-right: none;
+      }
+
+      &.hover-x {
+        background: url("./img/x-icon.svg");
+        background-size: 80% 80%;
+        background-position: center center;
+
+        background-repeat: no-repeat;
+      }
+
+      &.hover-o {
+        background: url("./img/o-icon.svg");
+        background-size: 80% 80%;
+        background-position: center center;
+        background-repeat: no-repeat;
+      }
+
+      &.selected-true {
+        background: url("./img/x-icon.svg");
+        background-size: 80% 80%;
+        background-position: center center;
+        background-repeat: no-repeat;
+      }
+
+      &.selected-false {
+        background: url("./img/o-icon.svg");
+        background-size: 80% 80%;
+        background-position: center center;
+        background-repeat: no-repeat;
+      }
+
+      &.win-grid {
+        @include linearGradient(to top, get(selection), get(selection));
+      }
+    }
+  }
+}

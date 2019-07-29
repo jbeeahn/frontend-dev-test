@@ -1,0 +1,68 @@
+.app-main--credit-container {
+  width: 100%;
+  height: 70vh;
+
+  @include flexbox;
+  @include flex-direction(column);
+  @include justify-content(flex-start);
+  @include align-items(center);
+
+  .app-main--credit-title {
+    width: 100%;
+    height: 10%;
+    color: get(white);
+
+    @include flexbox;
+    @include justify-content(center);
+    @include align-items(center);
+
+    font-size: 2rem;
+    font-weight: 700;
+  }
+
+  .app-main--credit-list {
+    width: 25%;
+
+    min-height: 30%;
+    max-height: 70%;
+
+    background-color: get(grey-dark);
+    color: get(white);
+    box-shadow: 2px 4px 3px get(black);
+
+    overflow: auto;
+
+    @include flexbox;
+    @include flex-direction(column);
+    @include justify-content(flex-start);
+    @include align-items(center);
+
+    .app-main--credit-entry {
+      width: 100%;
+      height: 2rem;
+
+      @include flexbox;
+      @include justify-content(center);
+      @include align-items(center);
+    }
+  }
+
+  .app-main--credit-back {
+    width: 100px;
+    height: 40px;
+
+    border-radius: 8px;
+
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: get(black);
+
+    text-decoration: none;
+    margin-top: 24px;
+
+    @include linearGradient(to top, get(btn-grad-start), get(btn-grad-end));
+    @include flexbox;
+    @include justify-content(center);
+    @include align-items(center);
+  }
+}

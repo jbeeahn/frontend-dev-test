@@ -1,0 +1,17 @@
+$palette: (
+  bg-grad-start: #000000,
+  bg-grad-end: #373737,
+  btn-grad-start: #b5e0d7,
+  btn-grad-end: #d7edea,
+  modal-bg: #383838,
+  selection: #33564f,
+  line: #47d7b6,
+  white: #ffffff,
+  black: #000000,
+  grey: #545454,
+  grey-dark: #2c2c2c
+);
+
+@function get($color) {
+  @return map-get($palette, $color);
+}

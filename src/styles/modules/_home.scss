@@ -1,0 +1,35 @@
+.app-main--home {
+  width: 100%;
+}
+
+.app-main--home-action-btn-group {
+  width: 100%;
+
+  @include flexbox;
+  @include flex-direction(row);
+  @include justify-content(center);
+  @include align-items(center);
+
+  .router-button {
+    width: 200px;
+    height: 80px;
+
+    margin: 0 15px;
+
+    font-size: 1.5rem;
+    font-weight: 900;
+    text-decoration: none;
+
+    border-radius: 12px;
+
+    &:visited {
+      color: get(black);
+    }
+
+    @include flexbox;
+    @include justify-content(center);
+    @include align-items(center);
+
+    @include linearGradient(to top, get(btn-grad-start), get(btn-grad-end));
+  }
+}

@@ -1,0 +1,7 @@
+const AppActionNames = {
+  FETCH_CREDIT: "FETCH_CREDIT",
+  FETCH_CREDIT_SUCCESS: "FETCH_CREDIT_SUCCESS",
+  RESET_CREDIT: "RESET_CREDIT"
+}
+
+export default AppActionNames

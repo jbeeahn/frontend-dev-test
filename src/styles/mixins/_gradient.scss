@@ -1,0 +1,13 @@
+@mixin linearGradient($direction, $start, $end) {
+  background: -moz-linear-gradient($direction, $start, $end); /* FF3.6-15 */
+  background: -webkit-linear-gradient(
+    $direction,
+    $start,
+    $end
+  ); /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(
+    $direction,
+    $start,
+    $end
+  ); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+}
