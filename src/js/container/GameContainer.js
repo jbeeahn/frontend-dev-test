@@ -12,17 +12,6 @@ import GameActions from "../actions/game-actions"
 const gridList = [1, 2, 3, 4, 5, 6, 7, 8, 9]
 
 class GameContainer extends Component {
-  constructor() {
-    super()
-    this.state = {
-      turn: true,
-      availableGrid: [1, 2, 3, 4, 5, 6, 7, 8, 9],
-      player1_selection: [],
-      player2_selection: [],
-      winner: false
-    }
-  }
-
   onMouseEnter = event => {
     const { turn, winner } = this.props
     const hoverTarget = turn ? "hover-x" : "hover-o"
